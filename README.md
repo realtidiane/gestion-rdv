@@ -177,6 +177,6 @@ cd RdvApp/android
 ---
 
 
-##  Auteurs
+##  Auteur
 
 Projet développé par Tidiane Sy dans le cadre d'un projet pédagogique.
