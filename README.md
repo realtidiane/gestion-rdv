@@ -106,7 +106,37 @@ Accessible sur : `http://localhost:5000/api-docs`
 
 ---
 
-## 🗄️ Base de données
+##  Base de données
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    telephone VARCHAR(20),
+    photo VARCHAR(255),
+    role VARCHAR(20) DEFAULT 'user',
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE services (
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    description TEXT,
+    duree INT,
+    prix DECIMAL(10,2)
+);
+
+CREATE TABLE rendezvous (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    service_id INT REFERENCES services(id),
+    date_rdv DATE NOT NULL,
+    heure_rdv TIME NOT NULL,
+    statut VARCHAR(20) DEFAULT 'en_attente',
+    commentaire TEXT,
+    created_at TIMESTAMP DEFAULT NOW()
+);
 
 ### Schéma
 
@@ -126,7 +156,7 @@ Accessible sur : `http://localhost:5000/api-docs`
 
 ---
 
-## 📦 Génération APK
+##  Génération APK
 
 ```bash
 cd RdvApp/android
@@ -138,7 +168,7 @@ cd RdvApp/android
 
 ---
 
-## 👤 Utilisateur Admin par défaut
+##  Utilisateur Admin par défaut
 
 | Email | Mot de passe |
 |-------|--------------|
