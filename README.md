@@ -176,12 +176,7 @@ cd RdvApp/android
 
 ---
 
-## 📄 Rapport
 
-Voir le fichier `rapport_projet.md` pour une documentation technique complète.
+##  Auteurs
 
----
-
-## 🛠️ Auteurs
-
-Projet développé dans le cadre d'un projet pédagogique.
+Projet développé par Tidiane Sy dans le cadre d'un projet pédagogique.
