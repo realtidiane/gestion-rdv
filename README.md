@@ -2,7 +2,7 @@
 
 Application mobile de gestion de rendez-vous pour établissement sanitaire.
 
-## 📱 Application Mobile
+##  Application Mobile
 
 ### Technologies
 - **Framework** : React Native CLI 0.85.3
